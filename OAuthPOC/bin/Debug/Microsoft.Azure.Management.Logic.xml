@@ -1,0 +1,4106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Azure.Management.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Azure.Management.Logic.ILogicManagementClient">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.Credentials">
+            <summary>
+            Gets Azure subscription credentials.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.SubscriptionId">
+            <summary>
+            The subscription id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.ApiVersion">
+            <summary>
+            The API version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.AcceptLanguage">
+            <summary>
+            Gets or sets the preferred language for the response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.LongRunningOperationRetryTimeout">
+            <summary>
+            Gets or sets the retry timeout in seconds for Long Running
+            Operations. Default value is 30.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.GenerateClientRequestId">
+            <summary>
+            When set to true a unique x-ms-client-request-id value is
+            generated and included in each request. Default is true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.Workflows">
+            <summary>
+            Gets the IWorkflowsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.WorkflowVersions">
+            <summary>
+            Gets the IWorkflowVersionsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.WorkflowAccessKeys">
+            <summary>
+            Gets the IWorkflowAccessKeysOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.WorkflowTriggers">
+            <summary>
+            Gets the IWorkflowTriggersOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.WorkflowTriggerHistories">
+            <summary>
+            Gets the IWorkflowTriggerHistoriesOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.WorkflowRuns">
+            <summary>
+            Gets the IWorkflowRunsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.ILogicManagementClient.WorkflowRunActions">
+            <summary>
+            Gets the IWorkflowRunActionsOperations.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations">
+            <summary>
+            WorkflowAccessKeysOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations.ListWithHttpMessagesAsync(System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow access keys.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='top'>
+            The number of items to be included in the result.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow access key.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a workflow access key.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='workflowAccesskey'>
+            The workflow access key.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a workflow access key.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations.ListSecretKeysWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists secret keys.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations.RegenerateSecretKeyWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Logic.Models.RegenerateSecretKeyParameters,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Regenerates secret key.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow access keys.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations">
+            <summary>
+            WorkflowRunActionsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations.ListWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowRunActionFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow run actions.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow run action.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='actionName'>
+            The workflow action name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow run actions.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.IWorkflowRunsOperations">
+            <summary>
+            WorkflowRunsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowRunsOperations.ListWithHttpMessagesAsync(System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowRunFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow runs.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowRunsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow run.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowRunsOperations.CancelWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Cancels a workflow run.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowRunsOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow runs.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.IWorkflowsOperations">
+            <summary>
+            WorkflowsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.ListBySubscriptionWithHttpMessagesAsync(Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by subscription.
+            </summary>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.ListByResourceGroupWithHttpMessagesAsync(System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by resource group.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.UpdateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Updates a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.RunWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Runs a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.BeginRunWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Runs a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.DisableWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Disables a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.EnableWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Enables a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.ValidateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Validates a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.ListBySubscriptionNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by subscription.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowsOperations.ListByResourceGroupNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by resource group.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations">
+            <summary>
+            WorkflowTriggerHistoriesOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations.ListWithHttpMessagesAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow trigger histories.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='top'>
+            The number of items to be included in the result.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow trigger history.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='historyName'>
+            The workflow trigger history name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow trigger histories.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations">
+            <summary>
+            WorkflowTriggersOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations.ListWithHttpMessagesAsync(System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowTriggerFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow triggers.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow trigger.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations.RunWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Runs a workflow trigger.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow triggers.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.IWorkflowVersionsOperations">
+            <summary>
+            WorkflowVersionsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.IWorkflowVersionsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow version.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='versionId'>
+            The workflow versionId.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.LogicManagementClient">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.LogicManagementClient.#ctor(System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LogicManagementClient class.
+            </summary>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.LogicManagementClient.#ctor(System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LogicManagementClient class.
+            </summary>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.LogicManagementClient.#ctor(System.Uri,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LogicManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.LogicManagementClient.#ctor(System.Uri,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LogicManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.LogicManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LogicManagementClient class.
+            </summary>
+            <param name='credentials'>
+            Required. Gets Azure subscription credentials.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.LogicManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LogicManagementClient class.
+            </summary>
+            <param name='credentials'>
+            Required. Gets Azure subscription credentials.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.LogicManagementClient.#ctor(System.Uri,Microsoft.Rest.ServiceClientCredentials,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LogicManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='credentials'>
+            Required. Gets Azure subscription credentials.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.LogicManagementClient.#ctor(System.Uri,Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LogicManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='credentials'>
+            Required. Gets Azure subscription credentials.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.LogicManagementClient.Initialize">
+            <summary>
+            Initializes client properties.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.Credentials">
+            <summary>
+            Gets Azure subscription credentials.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.SubscriptionId">
+            <summary>
+            The subscription id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.ApiVersion">
+            <summary>
+            The API version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.AcceptLanguage">
+            <summary>
+            Gets or sets the preferred language for the response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.LongRunningOperationRetryTimeout">
+            <summary>
+            Gets or sets the retry timeout in seconds for Long Running Operations.
+            Default value is 30.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.GenerateClientRequestId">
+            <summary>
+            When set to true a unique x-ms-client-request-id value is generated and
+            included in each request. Default is true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.Workflows">
+            <summary>
+            Gets the IWorkflowsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.WorkflowVersions">
+            <summary>
+            Gets the IWorkflowVersionsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.WorkflowAccessKeys">
+            <summary>
+            Gets the IWorkflowAccessKeysOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.WorkflowTriggers">
+            <summary>
+            Gets the IWorkflowTriggersOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.WorkflowTriggerHistories">
+            <summary>
+            Gets the IWorkflowTriggerHistoriesOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.WorkflowRuns">
+            <summary>
+            Gets the IWorkflowRunsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.LogicManagementClient.WorkflowRunActions">
+            <summary>
+            Gets the IWorkflowRunActionsOperations.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.LogicManagementClientExtensions">
+            <summary>
+            Extension methods for LogicManagementClient.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.ContentHash">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.ContentHash.#ctor">
+            <summary>
+            Initializes a new instance of the ContentHash class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.ContentHash.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the ContentHash class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ContentHash.Algorithm">
+            <summary>
+            Gets or sets the algorithm.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ContentHash.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.ContentLink">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.ContentLink.#ctor">
+            <summary>
+            Initializes a new instance of the ContentLink class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.ContentLink.#ctor(System.String,System.String,System.Nullable{System.Int64},Microsoft.Azure.Management.Logic.Models.ContentHash,System.Object)">
+            <summary>
+            Initializes a new instance of the ContentLink class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ContentLink.Uri">
+            <summary>
+            Gets or sets the content link URI.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ContentLink.ContentVersion">
+            <summary>
+            Gets or sets the content version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ContentLink.ContentSize">
+            <summary>
+            Gets or sets the content size.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ContentLink.ContentHash">
+            <summary>
+            Gets or sets the content hash.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ContentLink.Metadata">
+            <summary>
+            Gets or sets the metadata.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.KeyType">
+            <summary>
+            Defines values for KeyType.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.Page`1">
+            <summary>
+            Defines a page in Azure responses.
+            </summary>
+            <typeparam name="T">Type of the page content items</typeparam>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.Page`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>A an enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.Page`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>A an enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Page`1.NextPageLink">
+            <summary>
+            Gets the link to the next page.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.ParameterType">
+            <summary>
+            Defines values for ParameterType.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.RecurrenceFrequency">
+            <summary>
+            Defines values for RecurrenceFrequency.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.RegenerateSecretKeyParameters">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.RegenerateSecretKeyParameters.#ctor">
+            <summary>
+            Initializes a new instance of the RegenerateSecretKeyParameters
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.RegenerateSecretKeyParameters.#ctor(System.Nullable{Microsoft.Azure.Management.Logic.Models.KeyType})">
+            <summary>
+            Initializes a new instance of the RegenerateSecretKeyParameters
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.RegenerateSecretKeyParameters.KeyType">
+            <summary>
+            Gets or sets the key type. Possible values include:
+            'NotSpecified', 'Primary', 'Secondary'
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.Resource">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.Resource.#ctor">
+            <summary>
+            Initializes a new instance of the Resource class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.Resource.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the Resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Resource.Id">
+            <summary>
+            Gets or sets the resource id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Resource.Name">
+            <summary>
+            Gets the resource name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Resource.Type">
+            <summary>
+            Gets the resource type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Resource.Location">
+            <summary>
+            Gets or sets the resource location.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Resource.Tags">
+            <summary>
+            Gets or sets the resource tags.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.ResourceReference">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.ResourceReference.#ctor">
+            <summary>
+            Initializes a new instance of the ResourceReference class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.ResourceReference.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the ResourceReference class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ResourceReference.Id">
+            <summary>
+            Gets or sets the resource id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ResourceReference.Name">
+            <summary>
+            Gets the resource name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.ResourceReference.Type">
+            <summary>
+            Gets the resource type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters.#ctor">
+            <summary>
+            Initializes a new instance of the RunWorkflowParameters class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the RunWorkflowParameters class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters.Name">
+            <summary>
+            Gets or sets the name of workflow run trigger.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters.Outputs">
+            <summary>
+            Gets or sets the outputs of workflow run trigger.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.Sku">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.Sku.#ctor">
+            <summary>
+            Initializes a new instance of the Sku class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.Sku.#ctor(System.Nullable{Microsoft.Azure.Management.Logic.Models.SkuName},Microsoft.Azure.Management.Logic.Models.ResourceReference)">
+            <summary>
+            Initializes a new instance of the Sku class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Sku.Name">
+            <summary>
+            Gets or sets the name. Possible values include: 'NotSpecified',
+            'Free', 'Shared', 'Basic', 'Standard', 'Premium'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Sku.Plan">
+            <summary>
+            Gets or sets the reference to plan.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.SkuName">
+            <summary>
+            Defines values for SkuName.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.SubResource">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.SubResource.#ctor">
+            <summary>
+            Initializes a new instance of the SubResource class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.SubResource.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the SubResource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.SubResource.Id">
+            <summary>
+            Gets or sets the resource id.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.Workflow">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.Workflow.#ctor">
+            <summary>
+            Initializes a new instance of the Workflow class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.Workflow.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowProvisioningState},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowState},System.String,System.String,Microsoft.Azure.Management.Logic.Models.Sku,Microsoft.Azure.Management.Logic.Models.ContentLink,System.Object,Microsoft.Azure.Management.Logic.Models.ContentLink,System.Collections.Generic.IDictionary{System.String,Microsoft.Azure.Management.Logic.Models.WorkflowParameter})">
+            <summary>
+            Initializes a new instance of the Workflow class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.ProvisioningState">
+            <summary>
+            Gets the provisioning state. Possible values include:
+            'NotSpecified', 'Moving', 'Succeeded'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.CreatedTime">
+            <summary>
+            Gets the created time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.ChangedTime">
+            <summary>
+            Gets the changed time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.State">
+            <summary>
+            Gets or sets the state. Possible values include: 'NotSpecified',
+            'Enabled', 'Disabled', 'Deleted', 'Suspended'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.Version">
+            <summary>
+            Gets the version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.AccessEndpoint">
+            <summary>
+            Gets the access endpoint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.Sku">
+            <summary>
+            Gets or sets the sku.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.DefinitionLink">
+            <summary>
+            Gets or sets the link to definition.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.Definition">
+            <summary>
+            Gets or sets the definition.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.ParametersLink">
+            <summary>
+            Gets or sets the link to parameters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.Workflow.Parameters">
+            <summary>
+            Gets or sets the parameters.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowAccessKey class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the WorkflowAccessKey class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey.Name">
+            <summary>
+            Gets the workflow access key name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey.Type">
+            <summary>
+            Gets the workflow access key type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey.NotBefore">
+            <summary>
+            Gets or sets the not-before time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey.NotAfter">
+            <summary>
+            Gets or sets the not-after time.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowFilter">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowFilter.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowFilter class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowFilter.#ctor(System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowState})">
+            <summary>
+            Initializes a new instance of the WorkflowFilter class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowFilter.State">
+            <summary>
+            Gets or sets the state of workflows. Possible values include:
+            'NotSpecified', 'Enabled', 'Disabled', 'Deleted', 'Suspended'
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowOutputParameter">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowParameter">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowParameter.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowParameter class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowParameter.#ctor(System.Nullable{Microsoft.Azure.Management.Logic.Models.ParameterType},System.Object,System.Object)">
+            <summary>
+            Initializes a new instance of the WorkflowParameter class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowParameter.Type">
+            <summary>
+            Gets or sets the type. Possible values include: 'NotSpecified',
+            'String', 'SecureString', 'Int', 'Float', 'Bool', 'Array',
+            'Object', 'SecureObject'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowParameter.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowParameter.Metadata">
+            <summary>
+            Gets or sets the metadata.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowOutputParameter.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowOutputParameter class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowOutputParameter.#ctor(System.Nullable{Microsoft.Azure.Management.Logic.Models.ParameterType},System.Object,System.Object,System.Object)">
+            <summary>
+            Initializes a new instance of the WorkflowOutputParameter class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowOutputParameter.Error">
+            <summary>
+            Gets the error.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowProvisioningState">
+            <summary>
+            Defines values for WorkflowProvisioningState.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowRun">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRun.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowRun class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRun.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowStatus},System.String,System.Object,System.String,Microsoft.Azure.Management.Logic.Models.ResourceReference,Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger,System.Collections.Generic.IDictionary{System.String,Microsoft.Azure.Management.Logic.Models.WorkflowOutputParameter})">
+            <summary>
+            Initializes a new instance of the WorkflowRun class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.Name">
+            <summary>
+            Gets the workflow run name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.Type">
+            <summary>
+            Gets the workflow run type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.StartTime">
+            <summary>
+            Gets the start time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.EndTime">
+            <summary>
+            Gets the end time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.Status">
+            <summary>
+            Gets the status. Possible values include: 'NotSpecified',
+            'Paused', 'Running', 'Waiting', 'Succeeded', 'Skipped',
+            'Suspended', 'Cancelled', 'Failed'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.Code">
+            <summary>
+            Gets the code.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.Error">
+            <summary>
+            Gets the error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.CorrelationId">
+            <summary>
+            Gets the correlation id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.Workflow">
+            <summary>
+            Gets the reference to workflow version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.Trigger">
+            <summary>
+            Gets the fired trigger.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRun.Outputs">
+            <summary>
+            Gets the outputs.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowRunAction class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowStatus},System.String,System.Object,System.String,Microsoft.Azure.Management.Logic.Models.ContentLink,Microsoft.Azure.Management.Logic.Models.ContentLink)">
+            <summary>
+            Initializes a new instance of the WorkflowRunAction class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.Name">
+            <summary>
+            Gets the workflow run action name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.Type">
+            <summary>
+            Gets the workflow run action type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.StartTime">
+            <summary>
+            Gets the start time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.EndTime">
+            <summary>
+            Gets the end time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.Status">
+            <summary>
+            Gets the status. Possible values include: 'NotSpecified',
+            'Paused', 'Running', 'Waiting', 'Succeeded', 'Skipped',
+            'Suspended', 'Cancelled', 'Failed'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.Code">
+            <summary>
+            Gets the code.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.Error">
+            <summary>
+            Gets the error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.TrackingId">
+            <summary>
+            Gets the trackingId.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.InputsLink">
+            <summary>
+            Gets the link to inputs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunAction.OutputsLink">
+            <summary>
+            Gets the link to outputs.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowRunActionFilter">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRunActionFilter.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowRunActionFilter class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRunActionFilter.#ctor(System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowStatus})">
+            <summary>
+            Initializes a new instance of the WorkflowRunActionFilter class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunActionFilter.Status">
+            <summary>
+            Gets or sets the status of workflow run action. Possible values
+            include: 'NotSpecified', 'Paused', 'Running', 'Waiting',
+            'Succeeded', 'Skipped', 'Suspended', 'Cancelled', 'Failed'
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowRunFilter">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRunFilter.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowRunFilter class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRunFilter.#ctor(System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowStatus})">
+            <summary>
+            Initializes a new instance of the WorkflowRunFilter class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunFilter.Status">
+            <summary>
+            Gets or sets the status of workflow run. Possible values include:
+            'NotSpecified', 'Paused', 'Running', 'Waiting', 'Succeeded',
+            'Skipped', 'Suspended', 'Cancelled', 'Failed'
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowRunTrigger class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.#ctor(System.String,System.Object,Microsoft.Azure.Management.Logic.Models.ContentLink,System.Object,Microsoft.Azure.Management.Logic.Models.ContentLink,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowStatus},System.Object)">
+            <summary>
+            Initializes a new instance of the WorkflowRunTrigger class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.Inputs">
+            <summary>
+            Gets the inputs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.InputsLink">
+            <summary>
+            Gets the link to inputs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.Outputs">
+            <summary>
+            Gets the outputs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.OutputsLink">
+            <summary>
+            Gets the link to outputs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.StartTime">
+            <summary>
+            Gets the start time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.EndTime">
+            <summary>
+            Gets the end time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.TrackingId">
+            <summary>
+            Gets the trackingId.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.Code">
+            <summary>
+            Gets the code.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.Status">
+            <summary>
+            Gets the status. Possible values include: 'NotSpecified',
+            'Paused', 'Running', 'Waiting', 'Succeeded', 'Skipped',
+            'Suspended', 'Cancelled', 'Failed'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowRunTrigger.Error">
+            <summary>
+            Gets the error.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowSecretKeys">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowSecretKeys.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowSecretKeys class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowSecretKeys.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the WorkflowSecretKeys class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowSecretKeys.PrimarySecretKey">
+            <summary>
+            Gets the primary secret key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowSecretKeys.SecondarySecretKey">
+            <summary>
+            Gets the secondary secret key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowState">
+            <summary>
+            Defines values for WorkflowState.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowStatus">
+            <summary>
+            Defines values for WorkflowStatus.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowTrigger class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.#ctor(System.String,System.String,System.String,System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowTriggerProvisioningState},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowState},System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowStatus},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.Azure.Management.Logic.Models.WorkflowTriggerRecurrence,Microsoft.Azure.Management.Logic.Models.ResourceReference)">
+            <summary>
+            Initializes a new instance of the WorkflowTrigger class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.Name">
+            <summary>
+            Gets the workflow trigger name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.Type">
+            <summary>
+            Gets the workflow trigger type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.ProvisioningState">
+            <summary>
+            Gets the provisioning state. Possible values include:
+            'NotSpecified', 'Creating', 'Succeeded', 'Updating'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.CreatedTime">
+            <summary>
+            Gets the created time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.ChangedTime">
+            <summary>
+            Gets the changed time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.State">
+            <summary>
+            Gets the state. Possible values include: 'NotSpecified',
+            'Enabled', 'Disabled', 'Deleted', 'Suspended'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.Status">
+            <summary>
+            Gets the status. Possible values include: 'NotSpecified',
+            'Paused', 'Running', 'Waiting', 'Succeeded', 'Skipped',
+            'Suspended', 'Cancelled', 'Failed'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.LastExecutionTime">
+            <summary>
+            Gets the last execution time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.NextExecutionTime">
+            <summary>
+            Gets the next execution time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.Recurrence">
+            <summary>
+            Gets the workflow trigger recurrence.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTrigger.Workflow">
+            <summary>
+            Gets the reference to workflow.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerFilter">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerFilter.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowTriggerFilter class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerFilter.#ctor(System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowState})">
+            <summary>
+            Initializes a new instance of the WorkflowTriggerFilter class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerFilter.State">
+            <summary>
+            Gets or sets the state of workflow trigger. Possible values
+            include: 'NotSpecified', 'Enabled', 'Disabled', 'Deleted',
+            'Suspended'
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowTriggerHistory class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowStatus},System.String,System.Object,System.String,Microsoft.Azure.Management.Logic.Models.ContentLink,Microsoft.Azure.Management.Logic.Models.ContentLink,System.Nullable{System.Boolean},Microsoft.Azure.Management.Logic.Models.ResourceReference)">
+            <summary>
+            Initializes a new instance of the WorkflowTriggerHistory class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.Name">
+            <summary>
+            Gets the workflow trigger history name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.Type">
+            <summary>
+            Gets the workflow trigger history type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.StartTime">
+            <summary>
+            Gets the start time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.EndTime">
+            <summary>
+            Gets the end time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.Status">
+            <summary>
+            Gets the status. Possible values include: 'NotSpecified',
+            'Paused', 'Running', 'Waiting', 'Succeeded', 'Skipped',
+            'Suspended', 'Cancelled', 'Failed'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.Code">
+            <summary>
+            Gets the code.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.Error">
+            <summary>
+            Gets the error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.TrackingId">
+            <summary>
+            Gets the tracking id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.InputsLink">
+            <summary>
+            Gets the link to input parameters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.OutputsLink">
+            <summary>
+            Gets the link to output parameters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.Fired">
+            <summary>
+            Gets a value indicating whether trigger was fired.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerHistory.Run">
+            <summary>
+            Gets the reference to workflow run.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerProvisioningState">
+            <summary>
+            Defines values for WorkflowTriggerProvisioningState.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerRecurrence">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerRecurrence.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowTriggerRecurrence class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerRecurrence.#ctor(System.Nullable{Microsoft.Azure.Management.Logic.Models.RecurrenceFrequency},System.Nullable{System.Int32},System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Initializes a new instance of the WorkflowTriggerRecurrence class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerRecurrence.Frequency">
+            <summary>
+            Gets or sets the frequency. Possible values include: 'Second',
+            'Minute', 'Hour', 'Day', 'Week', 'Month', 'Year'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerRecurrence.Interval">
+            <summary>
+            Gets or sets the interval.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerRecurrence.StartTime">
+            <summary>
+            Gets or sets the start time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowTriggerRecurrence.TimeZone">
+            <summary>
+            Gets or sets the time zone.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.Models.WorkflowVersion">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.#ctor">
+            <summary>
+            Initializes a new instance of the WorkflowVersion class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{Microsoft.Azure.Management.Logic.Models.WorkflowState},System.String,System.String,Microsoft.Azure.Management.Logic.Models.Sku,Microsoft.Azure.Management.Logic.Models.ContentLink,System.Object,Microsoft.Azure.Management.Logic.Models.ContentLink,System.Collections.Generic.IDictionary{System.String,Microsoft.Azure.Management.Logic.Models.WorkflowParameter})">
+            <summary>
+            Initializes a new instance of the WorkflowVersion class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.CreatedTime">
+            <summary>
+            Gets the created time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.ChangedTime">
+            <summary>
+            Gets the changed time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.State">
+            <summary>
+            Gets or sets the state. Possible values include: 'NotSpecified',
+            'Enabled', 'Disabled', 'Deleted', 'Suspended'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.Version">
+            <summary>
+            Gets the version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.AccessEndpoint">
+            <summary>
+            Gets the access endpoint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.Sku">
+            <summary>
+            Gets or sets the sku.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.DefinitionLink">
+            <summary>
+            Gets or sets the link to definition.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.Definition">
+            <summary>
+            Gets or sets the definition.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.ParametersLink">
+            <summary>
+            Gets or sets the link to parameters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.Models.WorkflowVersion.Parameters">
+            <summary>
+            Gets or sets the parameters.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations">
+            <summary>
+            WorkflowAccessKeysOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations.#ctor(Microsoft.Azure.Management.Logic.LogicManagementClient)">
+            <summary>
+            Initializes a new instance of the WorkflowAccessKeysOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations.ListWithHttpMessagesAsync(System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow access keys.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='top'>
+            The number of items to be included in the result.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow access key.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a workflow access key.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='workflowAccesskey'>
+            The workflow access key.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a workflow access key.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations.ListSecretKeysWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists secret keys.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations.RegenerateSecretKeyWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Logic.Models.RegenerateSecretKeyParameters,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Regenerates secret key.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow access keys.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperations.Client">
+            <summary>
+            Gets a reference to the LogicManagementClient
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions">
+            <summary>
+            Extension methods for WorkflowAccessKeysOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.List(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets a list of workflow access keys.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='top'>
+            The number of items to be included in the result.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.ListAsync(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow access keys.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='top'>
+            The number of items to be included in the result.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.Get(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String)">
+            <summary>
+            Gets a workflow access key.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.GetAsync(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow access key.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.CreateOrUpdate(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey)">
+            <summary>
+            Creates or updates a workflow access key.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='workflowAccesskey'>
+            The workflow access key.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Logic.Models.WorkflowAccessKey,System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a workflow access key.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='workflowAccesskey'>
+            The workflow access key.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.Delete(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String)">
+            <summary>
+            Deletes a workflow access key.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a workflow access key.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.ListSecretKeys(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String)">
+            <summary>
+            Lists secret keys.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.ListSecretKeysAsync(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists secret keys.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.RegenerateSecretKey(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Logic.Models.RegenerateSecretKeyParameters)">
+            <summary>
+            Regenerates secret key.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.RegenerateSecretKeyAsync(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Logic.Models.RegenerateSecretKeyParameters,System.Threading.CancellationToken)">
+            <summary>
+            Regenerates secret key.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='accessKeyName'>
+            The workflow access key name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.ListNext(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String)">
+            <summary>
+            Gets a list of workflow access keys.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowAccessKeysOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Logic.IWorkflowAccessKeysOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow access keys.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperations">
+            <summary>
+            WorkflowRunActionsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperations.#ctor(Microsoft.Azure.Management.Logic.LogicManagementClient)">
+            <summary>
+            Initializes a new instance of the WorkflowRunActionsOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperations.ListWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowRunActionFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow run actions.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow run action.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='actionName'>
+            The workflow action name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow run actions.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperations.Client">
+            <summary>
+            Gets a reference to the LogicManagementClient
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperationsExtensions">
+            <summary>
+            Extension methods for WorkflowRunActionsOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperationsExtensions.List(Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations,System.String,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowRunActionFilter})">
+            <summary>
+            Gets a list of workflow run actions.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperationsExtensions.ListAsync(Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations,System.String,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowRunActionFilter},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow run actions.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperationsExtensions.Get(Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations,System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets a workflow run action.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='actionName'>
+            The workflow action name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperationsExtensions.GetAsync(Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow run action.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='actionName'>
+            The workflow action name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperationsExtensions.ListNext(Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations,System.String)">
+            <summary>
+            Gets a list of workflow run actions.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunActionsOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Logic.IWorkflowRunActionsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow run actions.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowRunsOperations">
+            <summary>
+            WorkflowRunsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperations.#ctor(Microsoft.Azure.Management.Logic.LogicManagementClient)">
+            <summary>
+            Initializes a new instance of the WorkflowRunsOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperations.ListWithHttpMessagesAsync(System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowRunFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow runs.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow run.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperations.CancelWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Cancels a workflow run.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow runs.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.WorkflowRunsOperations.Client">
+            <summary>
+            Gets a reference to the LogicManagementClient
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowRunsOperationsExtensions">
+            <summary>
+            Extension methods for WorkflowRunsOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperationsExtensions.List(Microsoft.Azure.Management.Logic.IWorkflowRunsOperations,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowRunFilter})">
+            <summary>
+            Gets a list of workflow runs.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperationsExtensions.ListAsync(Microsoft.Azure.Management.Logic.IWorkflowRunsOperations,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowRunFilter},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow runs.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperationsExtensions.Get(Microsoft.Azure.Management.Logic.IWorkflowRunsOperations,System.String,System.String,System.String)">
+            <summary>
+            Gets a workflow run.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperationsExtensions.GetAsync(Microsoft.Azure.Management.Logic.IWorkflowRunsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow run.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperationsExtensions.Cancel(Microsoft.Azure.Management.Logic.IWorkflowRunsOperations,System.String,System.String,System.String)">
+            <summary>
+            Cancels a workflow run.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperationsExtensions.CancelAsync(Microsoft.Azure.Management.Logic.IWorkflowRunsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Cancels a workflow run.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='runName'>
+            The workflow run name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperationsExtensions.ListNext(Microsoft.Azure.Management.Logic.IWorkflowRunsOperations,System.String)">
+            <summary>
+            Gets a list of workflow runs.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowRunsOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Logic.IWorkflowRunsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow runs.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowsOperations">
+            <summary>
+            WorkflowsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.#ctor(Microsoft.Azure.Management.Logic.LogicManagementClient)">
+            <summary>
+            Initializes a new instance of the WorkflowsOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.ListBySubscriptionWithHttpMessagesAsync(Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by subscription.
+            </summary>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.ListByResourceGroupWithHttpMessagesAsync(System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by resource group.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.UpdateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Updates a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.RunWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Runs a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.BeginRunWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Runs a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.DisableWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Disables a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.EnableWithHttpMessagesAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Enables a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.ValidateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Validates a workflow.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.ListBySubscriptionNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by subscription.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperations.ListByResourceGroupNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by resource group.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.WorkflowsOperations.Client">
+            <summary>
+            Gets a reference to the LogicManagementClient
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions">
+            <summary>
+            Extension methods for WorkflowsOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.ListBySubscription(Microsoft.Azure.Management.Logic.IWorkflowsOperations,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowFilter})">
+            <summary>
+            Gets a list of workflows by subscription.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.ListBySubscriptionAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowFilter},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by subscription.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.ListByResourceGroup(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowFilter})">
+            <summary>
+            Gets a list of workflows by resource group.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.ListByResourceGroupAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowFilter},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by resource group.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.Get(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String)">
+            <summary>
+            Gets a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.GetAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.CreateOrUpdate(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow)">
+            <summary>
+            Creates or updates a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow,System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.Update(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow)">
+            <summary>
+            Updates a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.UpdateAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow,System.Threading.CancellationToken)">
+            <summary>
+            Updates a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.Delete(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String)">
+            <summary>
+            Deletes a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.Run(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters)">
+            <summary>
+            Runs a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.RunAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters,System.Threading.CancellationToken)">
+            <summary>
+            Runs a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.BeginRun(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters)">
+            <summary>
+            Runs a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.BeginRunAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.RunWorkflowParameters,System.Threading.CancellationToken)">
+            <summary>
+            Runs a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='parameters'>
+            The parameters.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.Disable(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String)">
+            <summary>
+            Disables a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.DisableAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Disables a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.Enable(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String)">
+            <summary>
+            Enables a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.EnableAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Enables a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.Validate(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow)">
+            <summary>
+            Validates a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.ValidateAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.String,Microsoft.Azure.Management.Logic.Models.Workflow,System.Threading.CancellationToken)">
+            <summary>
+            Validates a workflow.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='workflow'>
+            The workflow.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.ListBySubscriptionNext(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String)">
+            <summary>
+            Gets a list of workflows by subscription.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.ListBySubscriptionNextAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by subscription.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.ListByResourceGroupNext(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String)">
+            <summary>
+            Gets a list of workflows by resource group.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowsOperationsExtensions.ListByResourceGroupNextAsync(Microsoft.Azure.Management.Logic.IWorkflowsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflows by resource group.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperations">
+            <summary>
+            WorkflowTriggerHistoriesOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperations.#ctor(Microsoft.Azure.Management.Logic.LogicManagementClient)">
+            <summary>
+            Initializes a new instance of the WorkflowTriggerHistoriesOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperations.ListWithHttpMessagesAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow trigger histories.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='top'>
+            The number of items to be included in the result.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow trigger history.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='historyName'>
+            The workflow trigger history name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow trigger histories.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperations.Client">
+            <summary>
+            Gets a reference to the LogicManagementClient
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperationsExtensions">
+            <summary>
+            Extension methods for WorkflowTriggerHistoriesOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperationsExtensions.List(Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations,System.String,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets a list of workflow trigger histories.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='top'>
+            The number of items to be included in the result.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperationsExtensions.ListAsync(Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations,System.String,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow trigger histories.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='top'>
+            The number of items to be included in the result.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperationsExtensions.Get(Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations,System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets a workflow trigger history.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='historyName'>
+            The workflow trigger history name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperationsExtensions.GetAsync(Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow trigger history.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='historyName'>
+            The workflow trigger history name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperationsExtensions.ListNext(Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations,System.String)">
+            <summary>
+            Gets a list of workflow trigger histories.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggerHistoriesOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Logic.IWorkflowTriggerHistoriesOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow trigger histories.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowTriggersOperations">
+            <summary>
+            WorkflowTriggersOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperations.#ctor(Microsoft.Azure.Management.Logic.LogicManagementClient)">
+            <summary>
+            Initializes a new instance of the WorkflowTriggersOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperations.ListWithHttpMessagesAsync(System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowTriggerFilter},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow triggers.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow trigger.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperations.RunWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Runs a workflow trigger.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow triggers.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.WorkflowTriggersOperations.Client">
+            <summary>
+            Gets a reference to the LogicManagementClient
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowTriggersOperationsExtensions">
+            <summary>
+            Extension methods for WorkflowTriggersOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperationsExtensions.List(Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowTriggerFilter})">
+            <summary>
+            Gets a list of workflow triggers.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperationsExtensions.ListAsync(Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations,System.String,System.String,Microsoft.Rest.Azure.OData.ODataQuery{Microsoft.Azure.Management.Logic.Models.WorkflowTriggerFilter},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow triggers.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='odataQuery'>
+            OData parameters to apply to the operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperationsExtensions.Get(Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations,System.String,System.String,System.String)">
+            <summary>
+            Gets a workflow trigger.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperationsExtensions.GetAsync(Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow trigger.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperationsExtensions.Run(Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations,System.String,System.String,System.String)">
+            <summary>
+            Runs a workflow trigger.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperationsExtensions.RunAsync(Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Runs a workflow trigger.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='triggerName'>
+            The workflow trigger name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperationsExtensions.ListNext(Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations,System.String)">
+            <summary>
+            Gets a list of workflow triggers.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowTriggersOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Logic.IWorkflowTriggersOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of workflow triggers.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowVersionsOperations">
+            <summary>
+            WorkflowVersionsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowVersionsOperations.#ctor(Microsoft.Azure.Management.Logic.LogicManagementClient)">
+            <summary>
+            Initializes a new instance of the WorkflowVersionsOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowVersionsOperations.GetWithHttpMessagesAsync(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow version.
+            </summary>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='versionId'>
+            The workflow versionId.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Logic.WorkflowVersionsOperations.Client">
+            <summary>
+            Gets a reference to the LogicManagementClient
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Logic.WorkflowVersionsOperationsExtensions">
+            <summary>
+            Extension methods for WorkflowVersionsOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowVersionsOperationsExtensions.Get(Microsoft.Azure.Management.Logic.IWorkflowVersionsOperations,System.String,System.String,System.String)">
+            <summary>
+            Gets a workflow version.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='versionId'>
+            The workflow versionId.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Logic.WorkflowVersionsOperationsExtensions.GetAsync(Microsoft.Azure.Management.Logic.IWorkflowVersionsOperations,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a workflow version.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The resource group name.
+            </param>
+            <param name='workflowName'>
+            The workflow name.
+            </param>
+            <param name='versionId'>
+            The workflow versionId.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+    </members>
+</doc>
